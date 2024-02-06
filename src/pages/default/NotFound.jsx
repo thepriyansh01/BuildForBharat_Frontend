@@ -1,4 +1,3 @@
-import React from "react";
 import not_found_img from "../../assets/not_found.png";
 
 const NotFound = () => {

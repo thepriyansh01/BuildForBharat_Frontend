@@ -1,4 +1,3 @@
-/* eslint-disable react/prop-types */
 import "./productCard.css";
 import { useNavigate } from "react-router-dom";
 import CardCarousel from "./cardCarousel/cardCarousel";

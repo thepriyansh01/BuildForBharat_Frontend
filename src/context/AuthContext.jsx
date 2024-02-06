@@ -1,4 +1,3 @@
-/* eslint-disable react/prop-types */
 import { createContext, useReducer } from "react";
 
 const INITIAL_STATE = {

@@ -4,10 +4,9 @@ import { useEffect, useState } from "react";
 import { useLocation } from "react-router-dom";
 import axios from "axios";
 import Product from "../../container/product/Product";
-import Loading from "../../container/loading/loading";
+import Loading from "../../container/loading/Loading";
 import Chat from "../../container/chat/chat";
 import { routes } from "../../routes/routes";
-
 
 const ProductPage = () => {
   const [product, setProduct] = useState(null);
@@ -87,7 +86,7 @@ const ProductPage = () => {
       {loading ? (
         <Loading />
       ) : error ? (
-        <div>Sorry, We can't find requested Product</div>
+        <div>Sorry, We can&apos;t find requested Product</div>
       ) : (
         <div className="ProductPage">
           <div className="ProductWrapper">
