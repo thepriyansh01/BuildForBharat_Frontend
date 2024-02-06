@@ -150,7 +150,7 @@ const Auth = () => {
         </div>
         {isLogin ? (
           <button onClick={(e) => handleLogin(e)}>
-            {loading ? "Loging In..." : "Login"}
+            {loading ? "Logging In..." : "Login"}
           </button>
         ) : (
           <button onClick={(e) => handleSignUp(e)}>
