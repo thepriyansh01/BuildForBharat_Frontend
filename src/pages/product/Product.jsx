@@ -58,7 +58,7 @@ const ProductPage = () => {
 
               const data = await axios.post(
                 `${routes.chat}/api/product`,
-                { stringData },
+                { product: stringData },
                 { headers }
               );
 
