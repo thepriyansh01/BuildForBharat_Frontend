@@ -4,7 +4,7 @@ import axios from "axios";
 import { Transition } from "@headlessui/react";
 import { Toaster, ToastIcon, toast, resolveValue } from "react-hot-toast";
 import { useNavigate } from "react-router-dom";
-import { AuthContext } from "../../context/authContext";
+import { AuthContext } from "../../context/AuthContext";
 import { routes } from "../../routes/routes";
 
 const TailwindToaster = () => {

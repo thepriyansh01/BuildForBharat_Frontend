@@ -4,8 +4,8 @@ import "./header.css";
 import logo from "../../assets/shoptalk.png";
 import { Link, useLocation, useNavigate } from "react-router-dom";
 import axios from "axios";
-import { AuthContext } from "../../context/authContext";
-import { SearchContext } from "../../context/searchContext";
+import { AuthContext } from "../../context/AuthContext";
+import { SearchContext } from "../../context/SearchContext";
 import { routes } from "../../routes/routes";
 
 const Header = () => {

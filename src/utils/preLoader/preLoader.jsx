@@ -1,7 +1,7 @@
 import { useState, useEffect, useContext } from "react";
 import "./preLoader.css";
 import { css } from "@emotion/react";
-import { AuthContext } from "../../context/authContext";
+import { AuthContext } from "../../context/AuthContext.jsx";
 import { routes } from "../../routes/routes";
 import { ClimbingBoxLoader } from "react-spinners";
 import axios from "axios";

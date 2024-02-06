@@ -2,7 +2,7 @@
 /* eslint-disable react-hooks/exhaustive-deps */
 import axios from "axios";
 import { useContext, useEffect, useState } from "react";
-import { SearchContext } from "../../context/searchContext";
+import { SearchContext } from "../../context/SearchContext.jsx";
 import ProductCard from "../../container/card/productCard";
 import Loading from "../../container/loading/loading";
 import { routes } from "../../routes/routes";
