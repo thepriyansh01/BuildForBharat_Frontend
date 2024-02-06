@@ -1,6 +1,6 @@
 import Products from "./homeJsonData";
 import "./home.css";
-import ProductCard from "../../container/card/productCard";
+import ProductCard from "../../container/card/ProductCard";
 
 const Home = () => {
   return (

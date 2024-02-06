@@ -3,9 +3,9 @@
 import axios from "axios";
 import { useContext, useEffect, useState } from "react";
 import { SearchContext } from "../../context/SearchContext.jsx";
-import ProductCard from "../../container/card/productCard";
-import Loading from "../../container/loading/loading";
-import { routes } from "../../routes/routes";
+import ProductCard from "../../container/card/ProductCard.jsx";
+import Loading from "../../container/loading/Loading.jsx";
+import { routes } from "../../routes/routes.jsx";
 
 const SearchPage = () => {
   const { searchString } = useContext(SearchContext);

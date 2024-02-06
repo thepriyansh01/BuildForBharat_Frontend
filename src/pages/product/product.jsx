@@ -3,7 +3,7 @@ import "./product.css";
 import { useEffect, useState } from "react";
 import { useLocation } from "react-router-dom";
 import axios from "axios";
-import Product from "../../container/product/product";
+import Product from "../../container/product/Product";
 import Loading from "../../container/loading/loading";
 import Chat from "../../container/chat/chat";
 import { routes } from "../../routes/routes";

@@ -1,4 +1,4 @@
-import ProductCarousel from "../productCarousel/productCarousel";
+import ProductCarousel from "../productCarousel/ProductCarousel";
 import "./product.css";
 const Product = ({ product }) => {
   const {
