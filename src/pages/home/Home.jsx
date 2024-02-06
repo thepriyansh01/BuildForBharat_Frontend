@@ -1,4 +1,4 @@
-import Products from "./homeJsonData";
+import Products from "./HomeJsonData";
 import "./home.css";
 import ProductCard from "../../container/card/ProductCard";
 

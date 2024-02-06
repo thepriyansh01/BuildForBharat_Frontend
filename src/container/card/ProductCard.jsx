@@ -1,6 +1,6 @@
 import "./productCard.css";
 import { useNavigate } from "react-router-dom";
-import CardCarousel from "./cardCarousel/cardCarousel";
+import CardCarousel from "./cardCarousel/CardCarousel";
 const ProductCard = ({ product }) => {
   const navigate = useNavigate();
   const { name, brand, price, discounted_price, description, images } = product;
