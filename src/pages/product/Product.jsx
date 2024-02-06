@@ -5,7 +5,7 @@ import { useLocation } from "react-router-dom";
 import axios from "axios";
 import Product from "../../container/product/Product";
 import Loading from "../../container/loading/Loading";
-import Chat from "../../container/chat/chat";
+import Chat from "../../container/chat/Chat";
 import { routes } from "../../routes/routes";
 
 const ProductPage = () => {
@@ -58,7 +58,7 @@ const ProductPage = () => {
 
               const data = await axios.post(
                 `${routes.chat}/api/product`,
-                { stringData },
+                { product: stringData },
                 { headers }
               );
 
