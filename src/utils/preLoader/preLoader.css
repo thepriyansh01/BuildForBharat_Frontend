@@ -1,0 +1,22 @@
+.preloader-container {
+    display: flex;
+    flex-direction: column;
+    height: 100vh;
+    width: 100vw;
+    align-items: center;
+    justify-content: center;
+    background-color: #19302E;
+    position: relative;
+}
+
+.preloader-heading {
+    display: flex;
+    width: 100%;align-items: center;justify-content: center;
+    text-align: center;
+    display: flex;
+    color: #fff;
+    font-size: 32px;
+    padding: 50px 0px;
+    position: absolute;
+    bottom: 20%;
+}
