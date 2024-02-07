@@ -42,14 +42,15 @@ const ProductPage = () => {
       if (location.pathname === "/product") {
         const productParams = new URLSearchParams(location.search);
         const productIdFromLocation = productParams.get("id");
-
         if (productIdFromLocation) {
           try {
             const response = await axios.get(
               `${routes.auth}/product/getProduct?productID=${productIdFromLocation}`
-            );
-
-            const product = response.data.product;
+              );
+              
+              const product = response.data.product;
+              localStorage.setItem("productId", product._id);
+            console.log("product", product);
             const stringData = makeString(product);
             try {
               const headers = {
@@ -58,7 +59,7 @@ const ProductPage = () => {
 
               const data = await axios.post(
                 `${routes.chat}/api/product`,
-                { product: stringData },
+                { product: stringData, id: product._id },
                 { headers }
               );
 
