@@ -49,24 +49,9 @@ const ProductPage = () => {
               );
               
               const product = response.data.product;
-              localStorage.setItem("productId", product._id);
-            console.log("product", product);
-            const stringData = makeString(product);
-            try {
-              const headers = {
-                Authorization: "Bearer secret_token",
-              };
-
-              const data = await axios.post(
-                `${routes.chat}/api/product`,
-                { product: stringData, id: product._id },
-                { headers }
-              );
-
-              console.log("data", data);
-            } catch (error) {
-              console.error("Error posting product:", error);
-            }
+              console.log("product", product);
+              const stringData = makeString(product);
+              localStorage.setItem("product", stringData);
 
             setProduct(product);
             setLoading(false);
