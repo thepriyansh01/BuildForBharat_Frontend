@@ -7,7 +7,7 @@ import { routes } from "../../routes/routes";
 const Chat = () => {
   const msgScrollerRef = useRef(null);
   const [inputValue, setInputValue] = useState("");
-  const [productId, setProductId] = useState("");
+  const [productData, setProductData] = useState("");
   const [messages, setMessages] = useState([
     {
       author: "bot",
@@ -16,8 +16,8 @@ const Chat = () => {
   ]);
   useEffect(() => {
     // Scroll to the bottom when messages change
-    const productId = localStorage.getItem("productId");
-    setProductId(productId);
+    const product = localStorage.getItem("product");
+    setProductData(product);
     if (msgScrollerRef.current) {
       msgScrollerRef.current.scrollTop = msgScrollerRef.current.scrollHeight;
     }
@@ -43,7 +43,7 @@ const Chat = () => {
         `${routes.chat}/api/chat`,
         {
           message: inputValue,
-          id: productId,
+          product: productData,
         },
         {
           headers,
