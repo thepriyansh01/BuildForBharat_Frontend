@@ -48,12 +48,12 @@ const ProductPage = () => {
           try {
             const response = await axios.get(
               `${routes.auth}/product/getProduct?productID=${productIdFromLocation}`
-              );
-              
-              const product = response.data.product;
-              console.log("product", product);
-              const stringData = makeString(product);
-              localStorage.setItem("product", stringData);
+            );
+
+            const product = response.data.product;
+            console.log("product", product);
+            const stringData = makeString(product);
+            localStorage.setItem("product", stringData);
 
             setProduct(product);
             setLoading(false);
@@ -78,20 +78,21 @@ const ProductPage = () => {
       ) : (
         <div className="ProductPage">
           <Product product={product} />
-          <div className="chatWrapper desktop-chat">
-            <Chat />
+          <div className="desktop-chat">
+            <Chat closeBtn={false} />
           </div>
-          <div
-            className="chatWrapper mobile-chat"
-            style={{
-              display: `${showChat ? "flex" : "none"}`,
-            }}
-          >
-            <Chat />
-          </div>
-          <div className="chat-btn" onClick={() => setShowChat(!showChat)}>
-            <img src={logo} alt="" />
-          </div>
+          {showChat && (
+            <div
+              className="mobile-chat"
+            >
+              <Chat closeBtn={true} setShowChat={setShowChat} />
+            </div>
+          )}
+          {!showChat && (
+            <div className="chat-btn" onClick={() => setShowChat(true)}>
+              <img src={logo} alt="" />
+            </div>
+          )}
         </div>
       )}
     </div>

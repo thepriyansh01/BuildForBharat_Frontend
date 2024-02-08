@@ -4,7 +4,7 @@ import { useEffect, useRef, useState } from "react";
 import axios from "axios";
 import { routes } from "../../routes/routes";
 
-const Chat = () => {
+const Chat = (props) => {
   const msgScrollerRef = useRef(null);
   const [inputValue, setInputValue] = useState("");
   const [productData, setProductData] = useState("");
@@ -68,8 +68,15 @@ const Chat = () => {
   return (
     <div className="Chat">
       <div className="chat-nav">
-        <img src={logo} alt="" className="chat-nav-logo" />
-        <div className="chat-nav-title">ShopTalk Bot</div>
+        <div className="chat-logo-wrapper">
+          <img src={logo} alt="" className="chat-nav-logo" />
+          <div className="chat-nav-title">ShopTalk Bot</div>
+        </div>
+        {props.closeBtn && (
+          <div className="close-btn" onClick={() => props.setShowChat(false)}>
+            &#x2716;
+          </div>
+        )}
       </div>
       <div className="msg-scroller" ref={msgScrollerRef}>
         {messages.map((msg, i) => (

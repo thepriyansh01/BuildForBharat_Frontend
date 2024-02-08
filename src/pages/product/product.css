@@ -30,9 +30,6 @@
 
 /* Styles specific to mobile screens */
 @media only screen and (max-width: 768px) {
-    /* .ProductPageWrapper {
-        position: relative;
-    } */
 
     .ProductPage {
         padding: 0;
@@ -40,24 +37,23 @@
         display: flex;
         align-items: flex-start;
         justify-content: center;
-        /* position: fixed;
-        top: 3em; */
     }
 
 
     .desktop-chat {
         display: none;
+        height: 0;
+        width: 0;
     }
 
     .mobile-chat {
         display: flex;
+        align-items: center;
+        justify-content: center;
         transform: scale(0.93);
-    }
-
-    .chatWrapper {
+        width: 100%;
         z-index: 100;
         position: fixed;
-        top: 5em;
     }
 
     .chat-btn {
