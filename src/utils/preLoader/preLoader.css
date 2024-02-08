@@ -11,7 +11,9 @@
 
 .preloader-heading {
     display: flex;
-    width: 100%;align-items: center;justify-content: center;
+    width: 100%;
+    align-items: center;
+    justify-content: center;
     text-align: center;
     display: flex;
     color: #fff;
@@ -19,4 +21,11 @@
     padding: 50px 0px;
     position: absolute;
     bottom: 20%;
+}
+
+@media only screen and (max-width: 768px) {
+
+    .preloader-heading {
+        font-size: 16px;
+    }
 }
