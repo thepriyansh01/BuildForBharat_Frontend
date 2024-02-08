@@ -95,3 +95,13 @@
     width: 25px;
     background-color: #000000cc;
 }
+
+@media only screen and (max-width: 768px) {
+    .productCarousel img.active {
+        transform: scale(0.8);
+    }
+
+    .productCarousel {
+        height: 550px;
+    }
+}

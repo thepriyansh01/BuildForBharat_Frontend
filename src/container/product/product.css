@@ -141,3 +141,31 @@
 .specificationElement.value {
     color: blue;
 }
+
+@media only screen and (max-width: 768px) {
+    .Product {
+        padding: 0;
+        margin: 0;
+    }
+
+
+    .productCardNameCol {
+        max-width: 280px;
+    }
+
+    .productCardName {
+        font-size: 20px;
+    }
+
+    .productCardBrand {
+        font-size: 16px;
+    }
+
+    .productCardDiscountedPrice {
+        font-size: 18px;
+    }
+
+    .productCardPrice {
+        font-size: 14px;
+    }
+}

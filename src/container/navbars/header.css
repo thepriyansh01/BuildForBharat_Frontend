@@ -1,5 +1,6 @@
 .navbar {
     display: flex;
+    flex-wrap: nowrap;
     align-items: center;
     justify-content: space-between;
     padding: 5px 10px;
@@ -178,4 +179,25 @@
 .option>svg {
     width: 20px;
     fill: white;
+}
+
+
+/* Styles specific to mobile screens */
+@media only screen and (max-width: 768px) {
+    .logo_wrapper {
+        transform: scale(0.8);
+    }
+
+    .website-name {
+        display: none;
+    }
+
+    .suggestion-list {
+        margin-top: 10px;
+        width: max-content;
+    }
+
+    .search-bar {
+        transform: scale(0.8);
+    }
 }

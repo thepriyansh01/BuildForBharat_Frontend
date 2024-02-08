@@ -7,11 +7,13 @@ import Product from "../../container/product/Product";
 import Loading from "../../container/loading/Loading";
 import Chat from "../../container/chat/Chat";
 import { routes } from "../../routes/routes";
+import logo from "../../assets/shoptalk.png";
 
 const ProductPage = () => {
   const [product, setProduct] = useState(null);
   const [loading, setLoading] = useState(true);
   const [error, setError] = useState(null);
+  const [showChat, setShowChat] = useState(false);
   const location = useLocation();
 
   const makeString = (jsonData) => {
@@ -75,15 +77,20 @@ const ProductPage = () => {
         <div>Sorry, We can&apos;t find requested Product</div>
       ) : (
         <div className="ProductPage">
-          <div className="ProductWrapper">
-            {product !== null && product !== undefined ? (
-              <Product product={product} />
-            ) : (
-              <div>Not Found</div>
-            )}
-          </div>
-          <div className="chatWrapper">
+          <Product product={product} />
+          <div className="chatWrapper desktop-chat">
             <Chat />
+          </div>
+          <div
+            className="chatWrapper mobile-chat"
+            style={{
+              display: `${showChat ? "flex" : "none"}`,
+            }}
+          >
+            <Chat />
+          </div>
+          <div className="chat-btn" onClick={() => setShowChat(!showChat)}>
+            <img src={logo} alt="" />
           </div>
         </div>
       )}
